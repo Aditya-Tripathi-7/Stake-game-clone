@@ -84,14 +84,14 @@ body {
 }
 
 .won_diamond {
-  background-image: url(/img/green-diamond-1625890677-5814848.jpeg);
+  background-image: url(../img/green-diamond-1625890677-5814848.jpeg);
   background-size: cover;
   box-shadow: 0px 0px 0px 0px #1b3040;
   filter: contrast(20%);
 }
 
 .won_bomb {
-  background-image: url(/img/bomb-removebg-preview.png);
+  background-image: url(../img/bomb-removebg-preview.png);
   background-size: contain;
   box-shadow: 0px 0px 0px 0px #1b3040;
   background-position: center;
