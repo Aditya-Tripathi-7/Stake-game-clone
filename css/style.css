@@ -504,6 +504,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+    .game_board_section {
+    padding: 5% 6% 5% 6%;
+  }
 }
 
 @media screen and (max-width: 350px) {
