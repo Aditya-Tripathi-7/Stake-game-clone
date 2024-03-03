@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main_container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(207, 19, 19);
+}
+
+.betting_setting_section {
+  height: 100%;
+  background-color: #253546;
+  /* padding: 2rem; */
+  color: white;
+}
+
+.game_board_section {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #122130;
+  justify-content: center;
+  padding: 5% 15% 5% 15%;
+  gap: 1rem;
+}
+
+.slots {
+  min-width: 120px;
+  max-width: 31%;
+  min-height: 80px;
+  max-height: 80px;
+  background-color: #334352;
+  border-radius: 8px;
+  /* background-image: url(/img/green-diamond-1625890677-5814848.jpeg); */
+  background-color: #324452;
+  background-size: cover;
+  box-shadow: 0px 8px 0px 0px #1b3040;
+  cursor: pointer;
+}
+
+.marked {
+  scale: 1;
+}
+
+.bet_is_on {
+  animation: scaleAnimation linear 1s infinite alternate;
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.won_diamond {
+  background-image: url(/img/green-diamond-1625890677-5814848.jpeg);
+  background-size: cover;
+  box-shadow: 0px 0px 0px 0px #1b3040;
+  filter: contrast(20%);
+}
+
+.won_bomb {
+  background-image: url(/img/bomb-removebg-preview.png);
+  background-size: contain;
+  box-shadow: 0px 0px 0px 0px #1b3040;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: contrast(20%);
+}
+
+.removeFilter {
+  filter: initial;
+}
+
+/* ***************************************************************************************************************** */
+
+/* css for betting_setting part */
+
+.manual_auto {
+  display: flex;
+  height: 40px;
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.manual {
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #182837;
+  border-radius: 5px;
+}
+
+.auto {
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d3d4c;
+  border-radius: 5px;
+}
+
+.manual:hover,
+.auto:hover {
+  scale: 1.1;
+}
+
+.bet_amount_section {
+  margin-bottom: 1.5rem;
+}
+
+.amount_balance_text {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 1rem 0.5rem 1rem;
+  margin-top: 2rem;
+}
+
+.Bbalance {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amount_balance_input {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.7rem;
+  align-items: center;
+}
+
+.amount_input {
+  padding: 0.4rem;
+  padding-left: 0.4rem;
+  background-color: #182837;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  width: 115px;
+  padding-left: 2rem;
+  font-size: 16px;
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+}
+
+.dollar_box {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.dollar {
+  position: relative;
+  left: 20px;
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+}
+
+#current_balance {
+  font-size: 25px;
+  margin-right: 0.7rem;
+}
+
+.mine_section {
+  margin: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.mine_button {
+  background-color: #48637b;
+  color: white;
+  border: 0;
+  padding: 7px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 6px;
+  margin: 1rem;
+  box-shadow: 0px 4px 0px 0px #26555e;
+  cursor: pointer;
+}
+
+.mine_button:hover {
+  scale: 0.8;
+}
+
+.profit_section {
+  margin: 0.7rem;
+}
+.profit {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #182837;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+.pick_random_tile {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #182837;
+  margin: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bet_button {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01e702;
+  margin: 0.7rem;
+  border-radius: 4px;
+  /* display: none; */
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.bet_button2 {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01e702;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  border: 0;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.188em;
+}
+
+.cashout_button {
+  height: 45px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #01e702;
+  margin: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cashout_button2 {
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01e702;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.188em;
+}
+
+/* ************************************************************************************************* */
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+.opening {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dev_name_div{
+    margin-top: 5rem;
+    display: flex;
+    text-align: center;
+    font-size: 3vmin;
+    font-family: "Protest Revolution", sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+
+}
+.dev_name{
+  margin: 0 0 0 2rem;
+  animation: colorChange 4s infinite;
+
+
+
+}
+
+
+@keyframes colorChange {
+  0% {
+      color: rgb(27, 22, 22);
+  }
+  25% {
+      color: rgb(65, 65, 94);
+  }
+  50% {
+      color: rgb(107, 107, 93);
+  }
+  70% {
+      color: rgb(149, 179, 149);
+  }
+  100% {
+      color: rgb(255, 255, 255);
+  }
+}
+
+.jt {
+  position: relative;
+  font-size: 20vmin;
+  font-family: "Staatliches", sans-serif;
+  text-transform: uppercase;
+  font-display: swap;
+  text-shadow: 0 0 10px tomato;
+}
+
+.jt__row {
+  display: block;
+}
+.jt__row:nth-child(1) {
+  clip-path: polygon(-10% 75%, 110% 75%, 110% 110%, -10% 110%);
+}
+.jt__row:nth-child(2) {
+  clip-path: polygon(-10% 50%, 110% 50%, 110% 75.3%, -10% 75.3%);
+}
+.jt__row:nth-child(3) {
+  clip-path: polygon(-10% 25%, 110% 25%, 110% 50.3%, -10% 50.3%);
+}
+.jt__row:nth-child(4) {
+  clip-path: polygon(-10% 0%, 110% 0%, 110% 25.3%, -10% 25.3%);
+}
+
+.jt__row.jt__row--sibling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  width: 800px;
+}
+
+.jt__text {
+  display: block;
+  transform-origin: bottom left;
+  animation: moveIn 2s 0s cubic-bezier(0.36, 0, 0.06, 1) alternate infinite;
+}
+.jt__row:nth-child(1) .jt__text {
+  transform: translateY(-0.1em);
+}
+.jt__row:nth-child(2) .jt__text {
+  transform: translateY(-0.3em) scaleY(1.1);
+}
+.jt__row:nth-child(3) .jt__text {
+  transform: translateY(-0.5em) scaleY(1.2);
+}
+.jt__row:nth-child(4) .jt__text {
+  transform: translateY(-0.7em) scaleY(1.3);
+}
+.jt__row:nth-child(5) .jt__text {
+  transform: translateY(-0.9em) scaleY(1.4);
+}
+.jt__row:nth-child(6) .jt__text {
+  transform: translateY(-1.1em) scaleY(1.5);
+}
+
+@keyframes moveIn {
+  50%,
+  100% {
+    transform: translateY(0em);
+  }
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.debug .jt__row:nth-child(even) {
+  color: black;
+  background: white;
+}
+.debug .jt__row:nth-child(odd) {
+  color: white;
+  background: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: black;
+  color: tomato;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stake {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ************************************************************************************************************* */
+
+/* for responsiveness */
+
+@media screen and (max-width: 1050px) {
+  /* Your styles for screens less than 1050px wide go here */
+
+  .game_container {
+    grid-template-columns: 1fr;
+  }
+
+  .amount_balance_text {
+    justify-content: space-around;
+  }
+
+  .amount_balance_input {
+    justify-content: space-around;
+  }
+
+  /* Add more styles as needed */
+
+  @media screen and (max-width: 550px) {
+    .slots {
+      width: 60px;
+      height: 60px;
+      min-width: 50px;
+    }
+  }
+
+  .mine_section {
+    font-size: 33px;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .mine_section2 {
+    font-size: 33px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .slots {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+  }
+}
+
+.mine_section {
+  font-size: 33px;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.mine_section2 {
+  font-size: 33px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ************************************************************************************************************* */
+
+
+
+.when_progress{
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.progress{
+  width: 100%;
+  border: 1px solid white;
+  height: 6px;
+  display: none;
+  border-radius: 10px;
+}
+
+.progress-bar{
+  background: #24913a;
+  height: 100%;
+  width: 1%;
+  animation: myAnimation 2s linear 1;
+  
+}
+
+@keyframes myAnimation {
+  0% { width: 1%; }
+  100% { width: 100%; }
+}

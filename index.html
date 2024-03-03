@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STAKES</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon_img.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="opening" id="openings">
+    <h1 class="jt --debug">
+      <span class="jt__row">
+        <span class="jt__text stake">STAKES</span>
+      </span>
+      <span class="jt__row jt__row--sibling" aria-hidden="true">
+        <span class="jt__text stake">STAKES</span>
+      </span>
+      <span class="jt__row jt__row--sibling" aria-hidden="true">
+        <span class="jt__text stake">STAKES</span>
+      </span>
+      <span class="jt__row jt__row--sibling" aria-hidden="true">
+        <span class="jt__text stake">STAKES</span>
+      </span>
+    </h1>
+    <div class="dev_name_div  jt__text">
+      <h1>CODED BY<span class="dev_name"><u>ADITYA TRIPATHI</u></span></h1>
+    </div>
+
+
+  </div>
+  <div class="main_container">
+    <div class="game_container">
+      <div class="betting_setting_section">
+        <div class="manual_auto">
+          <div class="manual">
+            <p>Manual</p>
+          </div>
+          <div class="auto">
+            <p>Auto</p>
+          </div>
+        </div>
+
+        <div class="bet_amount_section">
+          <div class="amount_balance_text">
+            <p class="Bbalance">Bet Amount</p>
+            <p>Balance</p>
+          </div>
+
+          <div class="amount_balance_input">
+            <div class="dollar_box">
+              <p class="dollar">$</p>
+              <input class="amount_input" type="number" id="bet_amount_input" name="numberInput" placeholder="0.00" />
+            </div>
+            <p id="current_balance">$10</p>
+          </div>
+        </div>
+
+        <div class="mine_section">
+          <p>Mines</p>
+          <div class="mine_section2">
+            <button class="mine_button" id="2mines" onclick="mines_place(2,4)">
+              2
+            </button>
+            <button class="mine_button" id="4mines" onclick="mines_place(4,8)">
+              4
+            </button>
+            <button class="mine_button" id="8mines" onclick="mines_place(8,20)">
+              8
+            </button>
+            <button class="mine_button" id="16mines" onclick="mines_place(16,60)">
+              16
+            </button>
+          </div>
+        </div>
+
+        <div class="profit_section">
+          <p id="into_sign">Profit is 0x</p>
+          <div class="profit">
+            <p id="profit_display">0.00</p>
+          </div>
+        </div>
+
+        <div class="pick_random_tile">
+          <p>Pick random tile</p>
+        </div>
+
+        <div class="bet_button" id="bet_button_box_id">
+          <button class="bet_button2" id="bet_button">Bet</button>
+        </div>
+        <div class="cashout_button" id="cashout_button_box_id">
+          <button id="cashout_button" class="cashout_button2"><p>cashout</p>
+            <div class="progress" id="progress_display">
+              <div class="progress-bar "></div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="game_board_section"></div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/style.js"></script>
+</body>
+
+</html>
